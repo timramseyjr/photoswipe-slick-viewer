@@ -127,8 +127,35 @@ $('.tlwViewer').tlw_ImageViewer();
 
 ## RTML
 
-Template to be built with first implementation
+Template tlw-image-viewer.rtml
 
 ## Demo
 
 http://test-st51-truelight.stores.yahoo.net/photoswipe.html
+
+Usage
+```
+//howmany - How far to count
+//imagevar - variable name of addition images
+//startnum - where to start.  If useinset below then start at 0
+//addimageseperator - seperator between imagevar and startnum
+//medh - height of medium image pad-image
+//medw - width of medium image pad-image
+//smh - height of small image pad-image
+//smw - width of small image pad-image
+//useinset - whether or not to start with @inset.  Set startnum to 0
+//responsiveobject - this is used in responsive projects when we are not writing out DOM, but building a Object of the images
+(howmany imagevar startnum addimageseperator medh medw smh smw useinset responsiveobject)
+ 
+ CALL :tlw-image-viewer 
+    8
+    "image"
+    2
+    nil
+    400
+    400
+    35
+    35
+    nil
+    nil
+```
