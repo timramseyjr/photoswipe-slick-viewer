@@ -1,0 +1,105 @@
+ytimes-mobile-images	howmany	addimagevariable	startnum	addimageseperator	medh	medw	smh	smw	useinset
+WHEN	@image
+	TAG-WHEN	|tag	"script type=\"text/javascript\" language=\"javascript\""
+		|test	:t
+		TEXT	"var mobims = ["
+		WITH=	|variable	rendbim
+			|value	RENDER	|image	@image
+			TEXT	STRING-APPEND
+					"{"
+					"mediumImage: {src: '"
+					GRAB
+						TEXT	IMAGE-REF	|image	CALL	:mobile-pad-image.
+										RENDER	|image	@image
+											|max-height	medh
+											|max-width	medw
+										medh
+										medw
+					"',w:"
+					medh
+					",h:"
+					medw
+					"}, smallImage: { src: '"
+					GRAB
+						TEXT	IMAGE-REF	|image	CALL	:mobile-pad-image.
+										RENDER	|image	@image
+											|max-height	smh
+											|max-width	smw
+										smh
+										smw
+					"',w:"
+					smw
+					",h:"
+					smh
+					"}, originalImage: { src: '"
+					IMAGE-REF	|image	@image
+					"',w:"
+					WIDTH	rendbim
+					",h:"
+					HEIGHT	rendbim
+					"}"
+					"}"
+		WITH=	|variable	howmanymod
+			|value	IF	|test	>	|value1	useinset
+							|value2	0
+					|then	howmany + startnum
+					|else	(howmany + startnum) + 1
+			FOR	|variable	i
+				|initial	startnum
+				|test	<	|value1	i
+						|value2	howmanymod
+				|update	i + 1
+				WITH=	|variable	inset
+					|value	IF	|test	EQUALS	|value1	i
+									|value2	0
+							|then	IF	|test	>	|value1	useinset
+											|value2	0
+									|then	@inset
+									|else	NAMED-PROP	|name	GRAB
+													addimagevariable
+													WHEN	NONEMPTY	addimageseperator
+														addimageseperator
+													i
+							|else	NAMED-PROP	|name	GRAB
+											addimagevariable
+											WHEN	NONEMPTY	addimageseperator
+												addimageseperator
+											i
+					WHEN	inset
+						WITH=	|variable	rendim
+							|value	RENDER	|image	inset
+							TEXT	STRING-APPEND
+									",{"
+									"mediumImage: {src: '"
+									GRAB
+										TEXT	IMAGE-REF	|image	CALL	:mobile-pad-image.
+														RENDER	|image	inset
+															|max-height	medh
+															|max-width	medw
+														medh
+														medw
+									"',w:"
+									medw
+									",h:"
+									medh
+									"}, smallImage: { src: '"
+									GRAB
+										TEXT	IMAGE-REF	|image	CALL	:mobile-pad-image.
+														RENDER	|image	inset
+															|max-height	smh
+															|max-width	smw
+														smh
+														smw
+									"',w:"
+									smw
+									",h:"
+									smh
+									"}, originalImage: { src: '"
+									IMAGE-REF	|image	inset
+									"',w:"
+									WIDTH	rendim
+									",h:"
+									HEIGHT	rendim
+									"}"
+									"}"
+		TEXT	"];"
