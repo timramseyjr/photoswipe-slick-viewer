@@ -16,12 +16,12 @@ or
 ```
 Add Photoswipe
 ```
-<script src="https://lib.store.yahoo.net/lib/test-st51-truelight/ps.all.pack.min.js"></script>
+<script src="//lib.store.yahoo.net/lib/test-st51-truelight/ps.all.pack.min.js"></script>
 ```
 Add Connection Plugin - .css file includes default photoswipe and slick themes.
 ```
-<script src="https://lib.store.yahoo.net/lib/test-st51-truelight/tlwimageViewer.js"></script>
-<link rel="stylesheet" type="text/css" href="https://lib.store.yahoo.net/lib/test-st51-truelight/tlwimageSkin.css"/>
+<script src="//lib.store.yahoo.net/lib/test-st51-truelight/tlwimageViewer.js"></script>
+<link rel="stylesheet" type="text/css" href="//lib.store.yahoo.net/lib/test-st51-truelight/tlwimageSkin.css"/>
 ```
 
 Open tlwimageSkin and find replace 'test-st51-trueligh' with the stores account and upload /lib file
