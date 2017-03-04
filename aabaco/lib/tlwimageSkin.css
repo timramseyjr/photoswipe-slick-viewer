@@ -1,6 +1,7 @@
 .slick-slide img {
   margin: 0 auto;
 }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -105,7 +106,7 @@
 
 /* Slider */
 .slick-loading .slick-list {
-  background: #fff url("//lib.store.yahoo.net/lib/test-st51-truelight/preloader.gif") center center no-repeat;
+  background: #fff url("//lib.store.yahoo.net/lib/test-st51-trueligh/preloader.gif") center center no-repeat;
 }
 
 /* Icons */
@@ -113,8 +114,8 @@
   font-family: 'slick';
   font-weight: normal;
   font-style: normal;
-  src: url("//lib.store.yahoo.net/lib/test-st51-truelight/slick.eot");
-  src: url("//lib.store.yahoo.net/lib/test-st51-truelight/slick.eot?#iefix") format("embedded-opentype"), url("//lib.store.yahoo.net/lib/test-st51-truelight/slick.woff") format("woff"), url("//lib.store.yahoo.net/lib/test-st51-truelight/slick.ttf") format("truetype"), url("//lib.store.yahoo.net/lib/test-st51-truelight/slick.svg#slick") format("svg");
+  src: url("//lib.store.yahoo.net/lib/test-st51-trueligh/slick.eot");
+  src: url("//lib.store.yahoo.net/lib/test-st51-trueligh/slick.eot?#iefix") format("embedded-opentype"), url("//lib.store.yahoo.net/lib/test-st51-trueligh/slick.woff") format("woff"), url("//lib.store.yahoo.net/lib/test-st51-trueligh/slick.ttf") format("truetype"), url("//lib.store.yahoo.net/lib/test-st51-trueligh/slick.svg#slick") format("svg");
 }
 
 /* Arrows */
@@ -142,7 +143,7 @@
 }
 
 .slick-prev {
-  background: url("//lib.store.yahoo.net/lib/test-st51-truelight/mim-controls.png") no-repeat 0 -32px;
+  background: url("//lib.store.yahoo.net/lib/test-st51-trueligh/mim-controls.png") no-repeat 0 -32px;
   left: 0;
 }
 
@@ -160,7 +161,7 @@
 }
 
 .slick-next {
-  background: url("//lib.store.yahoo.net/lib/test-st51-truelight/mim-controls.png") no-repeat -43px -32px;
+  background: url("//lib.store.yahoo.net/lib/test-st51-trueligh/mim-controls.png") no-repeat -43px -32px;
   right: 0;
 }
 
@@ -197,13 +198,16 @@
   padding: 5px 0 0 0;
   cursor: pointer;
 }
+
 .slickImgAlts .slick-dots {
   margin-top: 5px;
 }
-.slickImgAlts .slick-dots li{
+
+.slickImgAlts .slick-dots li {
   width: 35px;
   height: 35px;
 }
+
 .slick-dots li button {
   font-size: 0;
   line-height: 0;
@@ -217,9 +221,11 @@
   outline: none;
   background: transparent;
 }
+
 .slickImgAlts .slick-dots li button {
   display: none;
 }
+
 .slick-dots li button:hover,
 .slick-dots li button:focus {
   outline: none;
@@ -286,19 +292,23 @@
   width: 35px;
   height: 35px;
 }
+
 @media screen and (max-width: 400px) {
   .slick-dots img {
     display: none;
   }
-  .slickImgAlts .slick-dots li{
+  .slickImgAlts .slick-dots li {
     width: 20px;
     height: 20px;
   }
   .slickImgAlts .slick-dots {
     margin-top: 0;
   }
-  .slickImgAlts .slick-dots li button{ display: block;}
+  .slickImgAlts .slick-dots li button {
+    display: block;
+  }
 }
+
 /*Basic photoshwipe.css*/
 /*
 	Styles for basic PhotoSwipe functionality (sliding area, open/close transitions)
@@ -564,7 +574,7 @@
 }
 
 .pswp__button, .pswp__button--arrow--left:before, .pswp__button--arrow--right:before {
-  background: url(//lib.store.yahoo.net/lib/test-st51-truelight/tlw-skin.png) 0 0 no-repeat;
+  background: url(//lib.store.yahoo.net/lib/test-st51-trueligh/tlw-skin.png) 0 0 no-repeat;
   background-size: 264px 88px;
   width: 44px;
   height: 44px;
@@ -573,7 +583,7 @@
 @media (-webkit-min-device-pixel-ratio: 1.1), (min-resolution: 105dpi), (min-resolution: 1.1dppx) {
   /* Serve SVG sprite if browser supports SVG and resolution is more than 105dpi */
   .pswp--svg .pswp__button, .pswp--svg .pswp__button--arrow--left:before, .pswp--svg .pswp__button--arrow--right:before {
-    background-image: url(//lib.store.yahoo.net/lib/test-st51-truelight/tlw-skin.svg);
+    background-image: url(//lib.store.yahoo.net/lib/test-st51-trueligh/tlw-skin.svg);
   }
   .pswp--svg .pswp__button--arrow--left, .pswp--svg .pswp__button--arrow--right {
     background: none;
@@ -873,7 +883,7 @@ a.pswp__share--download:hover {
 
 .pswp__preloader--active .pswp__preloader__icn {
   /* We use .gif in browsers that don't support CSS animation */
-  background: url(//lib.store.yahoo.net/lib/test-st51-truelight/preloader.gif) 0 0 no-repeat;
+  background: url(//lib.store.yahoo.net/lib/test-st51-trueligh/preloader.gif) 0 0 no-repeat;
 }
 
 .pswp--css_animation .pswp__preloader--active {

@@ -1,0 +1,4 @@
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//lib.store.yahoo.net/lib/$storecode/slick.min.js"></script>
+<script src="//lib.store.yahoo.net/lib/$storecode/tlw.ps.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//lib.store.yahoo.net/lib/$storecode/tlwimageSkin.css"/>

@@ -3,6 +3,20 @@
 A integration plugin that seamlessly uses the two components for one viewer
 
 ## Install
+If use gulp
+```
+1. Open gulpfile.js and change value of storecode variable
+2. run 'gulp' from command line
+3. Upload lib.zip to files section that is in aabaco folder
+4. Paste contents of head.txt from that same folder into stores head
+```
+
+~OR~
+```
+1. Open tlwimageSkin.css in aabaco/lib directory and copy/replace storecode
+2. Zip lib directory and upload to files sections
+3. Add the following to the HEAD
+```
 
 Add jQuery
 ```
@@ -10,21 +24,17 @@ Add jQuery
 ```
 Add Slick
 ```
-<script type="text/javascript" src="//lib.store.yahoo.net/lib/test-st51-truelight/slick.min.js"></script>
-or
-<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script type="text/javascript" src="//lib.store.yahoo.net/lib/$storecode$/slick.min.js"></script>
 ```
-Add Photoswipe
+Add Photoswipe and connection plugin
 ```
-<script src="//lib.store.yahoo.net/lib/test-st51-truelight/ps.all.pack.min.js"></script>
+<script src="//lib.store.yahoo.net/lib/$storecode$/tlw.ps.min.js"></script>
 ```
-Add Connection Plugin - .css file includes default photoswipe and slick themes.
+Add Connection .css file includes default photoswipe and slick themes.
 ```
-<script src="//lib.store.yahoo.net/lib/test-st51-truelight/tlwimageViewer.js"></script>
-<link rel="stylesheet" type="text/css" href="//lib.store.yahoo.net/lib/test-st51-truelight/tlwimageSkin.css"/>
+<link rel="stylesheet" type="text/css" href="//lib.store.yahoo.net/lib/$storecode$/tlwimageSkin.css"/>
 ```
 
-Open tlwimageSkin and find replace 'test-st51-trueligh' with the stores account and upload /lib file
 
 ##To Do
 
@@ -159,3 +169,4 @@ Usage
 ## Demo
 
 http://test-st51-truelight.stores.yahoo.net/photoswipe.html
+http://test-st51-truelight.stores.yahoo.net/test-image-viewer.html
