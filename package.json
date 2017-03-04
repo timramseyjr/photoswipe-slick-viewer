@@ -1,0 +1,36 @@
+{
+  "name": "photoswipe-slick-viewer",
+  "version": "1.0.0",
+  "description": "Connection Plugin to seamlessly use slickJs and photoswipe",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-variables": "^1.1.1",
+    "gulp-uglify": "^2.0.1",
+    "node-gyp-install": "^2.2.0",
+    "gulp-packer": "^0.1.2",
+    "gulp-streamify": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timramseyjr/photoswipe-slick-viewer.git"
+  },
+  "keywords": [
+    "photoswipe",
+    "slick"
+  ],
+  "author": "Tim Ramsey",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/timramseyjr/photoswipe-slick-viewer/issues"
+  },
+  "homepage": "https://github.com/timramseyjr/photoswipe-slick-viewer#readme"
+}

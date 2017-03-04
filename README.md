@@ -129,10 +129,6 @@ $('.tlwViewer').tlw_ImageViewer();
 
 Template tlw-image-viewer.rtml
 
-## Demo
-
-http://test-st51-truelight.stores.yahoo.net/photoswipe.html
-
 Usage
 ```
 //howmany - How far to count
@@ -159,3 +155,7 @@ Usage
     nil
     nil
 ```
+
+## Demo
+
+http://test-st51-truelight.stores.yahoo.net/photoswipe.html
