@@ -3,7 +3,7 @@
 A integration plugin that seamlessly uses the two components for one viewer
 
 ## Install
-If use gulp
+If using gulp
 ```
 1. Open gulpfile.js and change value of storecode variable
 2. run 'gulp' from command line
