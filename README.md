@@ -2,6 +2,12 @@
 
 A integration plugin that seamlessly uses the two components for one viewer
 
+## Requirements
+
+* jQuery
+* [slickjs](http://kenwheeler.github.io/slick/)
+* [photoswipe](http://photoswipe.com/documentation/getting-started.html)
+
 ## Install
 If using gulp
 ```
@@ -34,17 +40,6 @@ Add Connection .css file includes default photoswipe and slick themes.
 ```
 <link rel="stylesheet" type="text/css" href="//lib.store.yahoo.net/lib/$storecode$/tlwimageSkin.css"/>
 ```
-
-
-##To Do
-
-Expand plugin to integrate in existing responsive site implementations
-
-## Requirements
-
-* jQuery
-* slickjs
-* photoswipe
 
 ## Usage
 
@@ -83,10 +78,6 @@ $('.tlwViewer').tlw_ImageViewer();
     appendForMobile:false, //Usage to come
     useSlick:true //Whether or not to use slick.  Setting to false will only use photoswipe, but will need to be fleshed out for actual implementations
 ```
-
-## Callbacks
-
-*None at this time*
 
 ## HTML
 
@@ -169,4 +160,9 @@ Usage
 ## Demo
 
 http://test-st51-truelight.stores.yahoo.net/photoswipe.html
+
 http://test-st51-truelight.stores.yahoo.net/test-image-viewer.html
+
+##To Do
+
+Expand plugin to integrate in existing responsive site implementations
