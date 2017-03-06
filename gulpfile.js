@@ -5,6 +5,7 @@
 3. Install Gulp Locally - npm uninstall gulp --save-dev (Remove if necessary - We need v4 for series option)
                           npm install 'gulpjs/gulp.git#4.0' --save-dev
 4. Install Modules - npm install --save-dev gulp gulp-zip gulp-sass gulp-concat gulp-replace gulp-sass-variables gulp-clean gulp-uglify gulp-packer gulp-streamify gulp-replace
+*. If having issues with errors relating to phyton/node-gyp(https://www.npmjs.com/package/node-gyp) and are on windows run - npm install --global --production windows-build-tools
 */
 var gulp = require('gulp'),
     sassVariables = require('gulp-sass-variables'),
