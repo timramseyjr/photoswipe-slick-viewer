@@ -1,9 +1,9 @@
-.slick-slide img {
+.tlwViewer .slick-slide img {
   margin: 0 auto;
 }
 
 /* Slider */
-.slick-slider {
+.tlwViewer .slick-slider {
   position: relative;
   display: block;
   -moz-box-sizing: border-box;
@@ -19,7 +19,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.slick-list {
+.tlwViewer .slick-list {
   position: relative;
   display: block;
   overflow: hidden;
@@ -27,17 +27,17 @@
   padding: 0;
 }
 
-.slick-list:focus {
+.tlwViewer .slick-list:focus {
   outline: none;
 }
 
-.slick-list.dragging {
+.tlwViewer .slick-list.dragging {
   cursor: pointer;
   cursor: hand;
 }
 
-.slick-slider .slick-track,
-.slick-slider .slick-list {
+.tlwViewer .slick-slider .slick-track,
+.tlwViewer .slick-slider .slick-list {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
@@ -45,28 +45,28 @@
   transform: translate3d(0, 0, 0);
 }
 
-.slick-track {
+.tlwViewer .slick-track {
   position: relative;
   top: 0;
   left: 0;
   display: block;
 }
 
-.slick-track:before,
-.slick-track:after {
+.tlwViewer .slick-track:before,
+.tlwViewer .slick-track:after {
   display: table;
   content: '';
 }
 
-.slick-track:after {
+.tlwViewer .slick-track:after {
   clear: both;
 }
 
-.slick-loading .slick-track {
+.tlwViewer .slick-loading .slick-track {
   visibility: hidden;
 }
 
-.slick-slide {
+.tlwViewer .slick-slide {
   display: none;
   float: left;
   height: 100%;
@@ -74,39 +74,39 @@
   margin: 0;
 }
 
-[dir='rtl'] .slick-slide {
+.tlwViewer [dir='rtl'] .slick-slide {
   float: right;
 }
 
-.slick-slide img {
+.tlwViewer .slick-slide img {
   display: block;
 }
 
-.slick-slide.slick-loading img {
+.tlwViewer .slick-slide.slick-loading img {
   display: none;
 }
 
-.slick-slide.dragging img {
+.tlwViewer .slick-slide.dragging img {
   pointer-events: none;
 }
 
-.slick-initialized .slick-slide {
+.tlwViewer .slick-initialized .slick-slide {
   display: block;
 }
 
-.slick-loading .slick-slide {
+.tlwViewer .slick-loading .slick-slide {
   visibility: hidden;
 }
 
-.slick-vertical .slick-slide {
+.tlwViewer .slick-vertical .slick-slide {
   display: block;
   height: auto;
   border: 1px solid transparent;
 }
 
 /* Slider */
-.slick-loading .slick-list {
-  background: #fff url("//lib.store.yahoo.net/lib/test-st51-trueligh/preloader.gif") center center no-repeat;
+.tlwViewer .slick-loading .slick-list {
+  background: #fff url("//lib.store.yahoo.net/lib/yhst-136786855154677/preloader.gif") center center no-repeat;
 }
 
 /* Icons */
@@ -114,13 +114,13 @@
   font-family: 'slick';
   font-weight: normal;
   font-style: normal;
-  src: url("//lib.store.yahoo.net/lib/test-st51-trueligh/slick.eot");
-  src: url("//lib.store.yahoo.net/lib/test-st51-trueligh/slick.eot?#iefix") format("embedded-opentype"), url("//lib.store.yahoo.net/lib/test-st51-trueligh/slick.woff") format("woff"), url("//lib.store.yahoo.net/lib/test-st51-trueligh/slick.ttf") format("truetype"), url("//lib.store.yahoo.net/lib/test-st51-trueligh/slick.svg#slick") format("svg");
+  src: url("//lib.store.yahoo.net/lib/yhst-136786855154677/slick.eot");
+  src: url("//lib.store.yahoo.net/lib/yhst-136786855154677/slick.eot?#iefix") format("embedded-opentype"), url("//lib.store.yahoo.net/lib/yhst-136786855154677/slick.woff") format("woff"), url("//lib.store.yahoo.net/lib/yhst-136786855154677/slick.ttf") format("truetype"), url("//lib.store.yahoo.net/lib/yhst-136786855154677/slick.svg#slick") format("svg");
 }
 
 /* Arrows */
-.slick-prev,
-.slick-next {
+.tlwViewer .slick-prev,
+.tlwViewer .slick-next {
   font-size: 0;
   line-height: 0;
   position: absolute;
@@ -137,49 +137,49 @@
   background: transparent;
 }
 
-.slick-prev.slick-disabled,
-.slick-next.slick-disabled {
+.tlwViewer .slick-prev.slick-disabled,
+.tlwViewer .slick-next.slick-disabled {
   opacity: .25;
 }
 
-.slick-prev {
-  background: url("//lib.store.yahoo.net/lib/test-st51-trueligh/mim-controls.png") no-repeat 0 -32px;
+.tlwViewer .slick-prev {
+  background: url("//lib.store.yahoo.net/lib/yhst-136786855154677/mim-controls.png") no-repeat 0 -32px;
   left: 0;
 }
 
-[dir='rtl'] .slick-prev {
+.tlwViewer [dir='rtl'] .slick-prev {
   right: -25px;
   left: auto;
 }
 
-.slick-prev:before {
+.tlwViewer .slick-prev:before {
   content: '?';
 }
 
-[dir='rtl'] .slick-prev:before {
+.tlwViewer [dir='rtl'] .slick-prev:before {
   content: '?';
 }
 
-.slick-next {
-  background: url("//lib.store.yahoo.net/lib/test-st51-trueligh/mim-controls.png") no-repeat -43px -32px;
+.tlwViewer .slick-next {
+  background: url("//lib.store.yahoo.net/lib/yhst-136786855154677/mim-controls.png") no-repeat -43px -32px;
   right: 0;
 }
 
-[dir='rtl'] .slick-next {
+.tlwViewer [dir='rtl'] .slick-next {
   right: auto;
   left: -25px;
 }
 
-.slick-next:before {
+.tlwViewer .slick-next:before {
   content: '?';
 }
 
-[dir='rtl'] .slick-next:before {
+.tlwViewer [dir='rtl'] .slick-next:before {
   content: '?';
 }
 
 /* Dots */
-.slick-dots {
+.tlwViewer .slick-dots {
   position: static;
   display: block;
   width: 100%;
@@ -189,7 +189,7 @@
   text-align: center;
 }
 
-.slick-dots li {
+.tlwViewer .slick-dots li {
   position: relative;
   display: inline-block;
   height: 20px;
@@ -199,16 +199,16 @@
   cursor: pointer;
 }
 
-.slickImgAlts .slick-dots {
+.tlwViewer.slickImgAlts .slick-dots {
   margin-top: 5px;
 }
 
-.slickImgAlts .slick-dots li {
-  width: 35px;
-  height: 35px;
+.tlwViewer.slickImgAlts .slick-dots li {
+  width: 50px;
+  height: 50px;
 }
 
-.slick-dots li button {
+.tlwViewer .slick-dots li button {
   font-size: 0;
   line-height: 0;
   display: block;
@@ -222,21 +222,21 @@
   background: transparent;
 }
 
-.slickImgAlts .slick-dots li button {
+.tlwViewer.slickImgAlts .slick-dots li button {
   display: none;
 }
 
-.slick-dots li button:hover,
-.slick-dots li button:focus {
+.tlwViewer .slick-dots li button:hover,
+.tlwViewer .slick-dots li button:focus {
   outline: none;
 }
 
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before {
+.tlwViewer .slick-dots li button:hover:before,
+.tlwViewer .slick-dots li button:focus:before {
   opacity: 1;
 }
 
-.slick-dots li button:before {
+.tlwViewer .slick-dots li button:before {
   font-family: 'verdana';
   font-size: 20px;
   line-height: 20px;
@@ -253,16 +253,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.slick-dots li.slick-active button:before {
+.tlwViewer .slick-dots li.slick-active button:before {
   opacity: .75;
   color: black;
 }
 
-.slick-dots img {
+.tlwViewer .slick-dots img {
   max-width: inherit !important;
 }
 
-.slick-dots li.slick-active img {
+.tlwViewer .slick-dots li.slick-active img {
   border: 1px solid #5280DD;
 }
 
@@ -294,17 +294,17 @@
 }
 
 @media screen and (max-width: 400px) {
-  .slick-dots img {
+  .tlwViewer .slick-dots img {
     display: none;
   }
-  .slickImgAlts .slick-dots li {
+  .tlwViewer.slickImgAlts .slick-dots li {
     width: 20px;
     height: 20px;
   }
-  .slickImgAlts .slick-dots {
+  .tlwViewer.slickImgAlts .slick-dots {
     margin-top: 0;
   }
-  .slickImgAlts .slick-dots li button {
+  .tlwViewer.slickImgAlts .slick-dots li button {
     display: block;
   }
 }
@@ -574,7 +574,7 @@
 }
 
 .pswp__button, .pswp__button--arrow--left:before, .pswp__button--arrow--right:before {
-  background: url(//lib.store.yahoo.net/lib/test-st51-trueligh/tlw-skin.png) 0 0 no-repeat;
+  background: url(//lib.store.yahoo.net/lib/yhst-136786855154677/tlw-skin.png) 0 0 no-repeat;
   background-size: 264px 88px;
   width: 44px;
   height: 44px;
@@ -583,7 +583,7 @@
 @media (-webkit-min-device-pixel-ratio: 1.1), (min-resolution: 105dpi), (min-resolution: 1.1dppx) {
   /* Serve SVG sprite if browser supports SVG and resolution is more than 105dpi */
   .pswp--svg .pswp__button, .pswp--svg .pswp__button--arrow--left:before, .pswp--svg .pswp__button--arrow--right:before {
-    background-image: url(//lib.store.yahoo.net/lib/test-st51-trueligh/tlw-skin.svg);
+    background-image: url(//lib.store.yahoo.net/lib/yhst-136786855154677/tlw-skin.svg);
   }
   .pswp--svg .pswp__button--arrow--left, .pswp--svg .pswp__button--arrow--right {
     background: none;
@@ -883,7 +883,7 @@ a.pswp__share--download:hover {
 
 .pswp__preloader--active .pswp__preloader__icn {
   /* We use .gif in browsers that don't support CSS animation */
-  background: url(//lib.store.yahoo.net/lib/test-st51-trueligh/preloader.gif) 0 0 no-repeat;
+  background: url(//lib.store.yahoo.net/lib/yhst-136786855154677/preloader.gif) 0 0 no-repeat;
 }
 
 .pswp--css_animation .pswp__preloader--active {

@@ -1,0 +1,195 @@
+yt-mobile-images	howmany	imagevar	startnum	addimageseperator	medh	medw	smh	smw	useinset	responsiveobject
+WHEN	@image
+	WITH=	|variable	howmanymod
+		|value	IF	|test	>	|value1	useinset
+						|value2	0
+				|then	howmany + startnum
+				|else	(howmany + startnum) + 1
+		IF	|test	responsiveobject
+			|then	TAG-WHEN	|tag	"script type=\"text/javascript\" language=\"javascript\""
+					|test	:t
+					TEXT	"var mobims = ["
+					WITH=	|variable	rendbim
+						|value	RENDER	|image	@image
+						TEXT	STRING-APPEND
+								"{"
+								"mediumImage: {src: '"
+								GRAB
+									TEXT	IMAGE-REF	|image	CALL	:mobile-pad-image.
+													RENDER	|image	@image
+														|max-height	medh
+														|max-width	medw
+													medh
+													medw
+								"',w:"
+								medh
+								",h:"
+								medw
+								"}, smallImage: { src: '"
+								GRAB
+									TEXT	IMAGE-REF	|image	CALL	:mobile-pad-image.
+													RENDER	|image	@image
+														|max-height	smh
+														|max-width	smw
+													smh
+													smw
+								"',w:"
+								smw
+								",h:"
+								smh
+								"}, originalImage: { src: '"
+								IMAGE-REF	|image	@image
+								"',w:"
+								WIDTH	rendbim
+								",h:"
+								HEIGHT	rendbim
+								"}"
+								"}"
+					FOR	|variable	i
+						|initial	startnum
+						|test	<	|value1	i
+								|value2	howmanymod
+						|update	i + 1
+						WITH=	|variable	inset
+							|value	IF	|test	EQUALS	|value1	i
+											|value2	0
+									|then	IF	|test	>	|value1	useinset
+													|value2	0
+											|then	@inset
+											|else	NAMED-PROP	|name	GRAB
+															imagevar
+															addimageseperator
+															i
+									|else	NAMED-PROP	|name	GRAB
+													imagevar
+													addimageseperator
+													i
+							WHEN	inset
+								WITH=	|variable	rendim
+									|value	RENDER	|image	inset
+									TEXT	STRING-APPEND
+											",{"
+											"mediumImage: {src: '"
+											GRAB
+												TEXT	IMAGE-REF	|image	CALL	:mobile-pad-image.
+																RENDER	|image	inset
+																	|max-height	medh
+																	|max-width	medw
+																medh
+																medw
+											"',w:"
+											medw
+											",h:"
+											medh
+											"}, smallImage: { src: '"
+											GRAB
+												TEXT	IMAGE-REF	|image	CALL	:mobile-pad-image.
+																RENDER	|image	inset
+																	|max-height	smh
+																	|max-width	smw
+																smh
+																smw
+											"',w:"
+											smw
+											",h:"
+											smh
+											"}, originalImage: { src: '"
+											IMAGE-REF	|image	inset
+											"',w:"
+											WIDTH	rendim
+											",h:"
+											HEIGHT	rendim
+											"}"
+											"}"
+					TEXT	"];"
+			|else	MULTI
+					TAG-WHEN	|tag	"div"
+						|test	:t
+						TEXT	STRING-APPEND
+								"<a href=\""
+								IMAGE-REF	|image	@image
+								"\" data-orig-height=\""
+								HEIGHT	@image
+								"\" data-orig-width=\""
+								WIDTH	@image
+								"\"><img src=\""
+								GRAB
+									TEXT	IMAGE-REF	|image	CALL	:mobile-pad-image.
+													RENDER	|image	@image
+														|max-height	medh
+														|max-width	medw
+													medh
+													medw
+								"\" data-med-height=\""
+								medh
+								"\" data-med-width=\""
+								medw
+								"\" data-sm-height=\""
+								smh
+								"\" data-sm-width=\""
+								smw
+								"\" data-sm-img=\""
+								GRAB
+									TEXT	IMAGE-REF	|image	CALL	:mobile-pad-image.
+													RENDER	|image	@image
+														|max-height	smh
+														|max-width	smw
+													smh
+													smw
+								"\" />	|"</a>
+					FOR	|variable	i
+						|initial	startnum
+						|test	<	|value1	i
+								|value2	howmanymod
+						|update	i + 1
+						WITH=	|variable	inset
+							|value	IF	|test	EQUALS	|value1	i
+											|value2	0
+									|then	IF	|test	>	|value1	useinset
+													|value2	0
+											|then	@inset
+											|else	NAMED-PROP	|name	GRAB
+															imagevar
+															addimageseperator
+															i
+									|else	NAMED-PROP	|name	GRAB
+													imagevar
+													addimageseperator
+													i
+							WHEN	inset
+								TAG-WHEN	|tag	"div"
+									|test	:t
+									WITH=	|variable	rendim
+										|value	RENDER	|image	inset
+										TEXT	STRING-APPEND
+												"<a href=\""
+												IMAGE-REF	|image	inset
+												"\" data-orig-height=\""
+												HEIGHT	rendim
+												"\" data-orig-width=\""
+												WIDTH	rendim
+												"\"><img src=\""
+												GRAB
+													TEXT	IMAGE-REF	|image	CALL	:mobile-pad-image.
+																	RENDER	|image	inset
+																		|max-height	medh
+																		|max-width	medw
+																	medh
+																	medw
+												"\" data-med-height=\""
+												medh
+												"\" data-med-width=\""
+												medw
+												"\" data-sm-height=\""
+												smh
+												"\" data-sm-width=\""
+												smw
+												"\" data-sm-img=\""
+												GRAB
+													TEXT	IMAGE-REF	|image	CALL	:mobile-pad-image.
+																	RENDER	|image	inset
+																		|max-height	smh
+																		|max-width	smw
+																	smh
+																	smw
+												"\" />	|"</a>

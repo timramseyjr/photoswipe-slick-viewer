@@ -31,18 +31,25 @@
         };
         base.initalSetup = function(){
             $('body').append(base.pswpHtml());
-            if(base.options.appendForMobile){
-                base.$el.after('<div class="mobileAppend"></div>');
+            if(base.options.appendMobileOnlyViewer){
+                base.$el.after('<div class="mobileAppend" style="display: none;"></div>');
+                $.each(base.origImgObjects, function(idx, obj) {
+                    $('.mobileAppend').append('<div><a href="'+obj.originalImage.src+'"><img src="'+obj.mediumImage.src+'" /></a></div>');
+                });
             }
-            base.$el.on('click', 'a', function (event) {
+            base.$trueEl = base.options.appendMobileOnlyViewer ? $('.mobileAppend') : base.$el;
+            base.$trueEl.addClass('tlwViewer');
+            base.$trueEl.on('click', 'a', function (event) {
                 event.preventDefault();
-                var currentIndex = base.options.useSlick ? base.$el.slick('slickCurrentSlide') : $(this).parent().index();
+                /*This is for newer version of slick*/
+                //var currentIndex = base.options.useSlick ? base.$trueEl.slick('slickCurrentSlide') : $(this).parent().index();
+                var currentIndex = $(this).parent().index();
                 base.photoSwipe(currentIndex);
             });
             if(base.options.slickBottomAlts){
-                base.$el.addClass('slickImgAlts')
+                base.$trueEl.addClass('slickImgAlts')
             }
-        }
+        };
         base.photoSwipe = function (index){
             var options = $.extend({},base.options.psOptions,{
                 index:index
@@ -112,7 +119,7 @@
             }else{
                 var slickOptions = base.options.slickOptions;
             }
-            var slick = base.$el.slick(slickOptions);
+            var slick = base.$trueEl.slick(slickOptions);
             return slick;
         };
         base.pswpHtml = function(){
@@ -180,10 +187,11 @@
                 }
             ],
             dots: true,
-            infinite: false
+            infinite: false,
+            speed:500
         },
         imageObjects:null,
-        appendForMobile:false,
+        appendMobileOnlyViewer:false,
         useSlick:true
     };
     $.fn.tlw_ImageViewer = function(options){

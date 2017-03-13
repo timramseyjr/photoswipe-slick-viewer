@@ -18,7 +18,7 @@ var gulp = require('gulp'),
     zip = require('gulp-zip'),
     replace = require('gulp-replace');
 
-var storecode = 'test-st51-trueligh';
+var storecode = 'yhst-136786855154677';
 
 var sassOptions = {
     errLogToConsole: true,

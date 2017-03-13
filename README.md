@@ -75,7 +75,7 @@ $('.tlwViewer').tlw_ImageViewer();
         infinite: false
     },
     imageObjects:null, //This can be used to send an objects of images to override DOM build.  The intent is for responsive addition implementation
-    appendForMobile:false, //Usage to come
+    appendMobileOnlyViewer:false, //Set to true and pass in mobims imageObject from RTML template or another object with all the images.  It will add another div under main image div with all the images so you can show it on smaller devices only.
     useSlick:true //Whether or not to use slick.  Setting to false will only use photoswipe, but will need to be fleshed out for actual implementations
 ```
 
